@@ -17,7 +17,7 @@ import java.util.Map;
 public class RolTrabajaCon {
     // tendra el id del rol y el array de id de los roles con los cuales trabaja
     private HashMap <String, ArrayList<String>> rolColaboraConRol;
-    private HashMap <String, String> name;
+     private HashMap <String, String> name;
     private ArrayList<Tarea> tareas;
     private ArrayList<Role> roles;
     

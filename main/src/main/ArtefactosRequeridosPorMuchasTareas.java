@@ -38,13 +38,9 @@ public class ArtefactosRequeridosPorMuchasTareas {
                 if (tarea.getMandatoryImput().contains(idArtf)) {
                    numRequerido+=1;
                 }
-                if (tarea.getOptionalImput().contains(idArtf)) {
-                   numRequerido+=1;
-                }
-                
+
             }        
             artf.setNumVecesRequerido(numRequerido);
-            System.out.println(artf.getName()+" o "+artf.getPresentacionName()+"--> "+numRequerido);
         }  
         
     }
@@ -52,12 +48,13 @@ public class ArtefactosRequeridosPorMuchasTareas {
     
     //si da incongruencias, cambiar aqui artefactos.size por tareas.size
     public void calcularNumArtefactosRequeridosPromedio(){
-        for (Artefacto artf : artefactos){
+        for (Artefacto artf : artefactos) {
            this.promUsoArtefactos+=artf.getNumVecesRequerido();
           
         }
-        this.promUsoArtefactos= this.promUsoArtefactos/artefactos.size();
-       
+    
+        this.promUsoArtefactos= this.promUsoArtefactos/tareas.size();
+        System.out.println(this.promUsoArtefactos);
       
        
     }
@@ -87,7 +84,7 @@ public class ArtefactosRequeridosPorMuchasTareas {
     
     public void buscarArtefactosMuyRequeridos(){
         for (Artefacto artf : artefactos) {
-            if( artf.getDistanciaConRespectoAlPromedio() > this.desviacionEstandarArtefactosRequeridos && artf.getNumVecesRequerido()>0){
+            if( artf.getDistanciaConRespectoAlPromedio() > this.desviacionEstandarArtefactosRequeridos){
                 artf.setEsMuyRequerido(true);
             }
         }
@@ -95,7 +92,7 @@ public class ArtefactosRequeridosPorMuchasTareas {
     
     public void MostrarArtefactosMuyRequeridos(){
          for (Artefacto artf : artefactos) {
-             if(artf.isEsMuyRequerido() ){
+             if(artf.isEsMuyRequerido() && artf.getNumVecesRequerido()>0){
                  System.out.println(artf.getName());
              }
              //System.out.println(artf.getName()+" "+artf.getNumVecesRequerido());
