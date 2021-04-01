@@ -30,7 +30,7 @@ public class Main {
     
     public static void main(String[] args) {
         boolean cargado=false;
-        File file = new File("C:/Users/pparr/OneDrive/Escritorio/Hoy/procesos EPF/ProcesoMobius4.xml"); //ProcesoMobius4.xml rhiscom-proccess
+        File file = new File("C:/Users/pparr/OneDrive/Escritorio/Hoy/procesos EPF/prueba3.xml"); //ProcesoMobius4.xml rhiscom-proccess
         File file2 = new File("C:/Users/pparr/OneDrive/Escritorio/plani.xml");
         try {
             //cargar el archivo xml  y convertirlo a doc

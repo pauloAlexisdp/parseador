@@ -86,7 +86,7 @@ public class RolesConDemasiadoTrabajo {
     
     public void determinarRolesConDemasiadoTrabajo(){
         for (Role rol : roles) {
-            if( rol.getNumTareasQueRealiza() > this.desviacionEstandar && rol.getNumTareasQueRealiza()>0){
+            if( rol.getNumTareasQueRealiza() > this.desviacionEstandar){
                 rol.setSobreCargado(true);
                 System.out.println(rol.getName()+" o "+rol.getPresentationName());
             }
