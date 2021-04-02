@@ -180,7 +180,7 @@ public class ConsumirJson {
                     if(entidad.has("MandatoryInput")){
                         String auxInput;
                         //preguntamos si mandatory input es del tipo array. porque se puede dar el caso.
-                        if(entidad.get("MandatoryInput").getClass().toString().equalsIgnoreCase("class org.json.JSONArray")){
+                        if(entidad.get("MandatoryInput").getClass().toString().equals("class org.json.JSONArray")){
                             
                             JSONArray mInputA =entidad.getJSONArray("MandatoryInput");
                             for (int j = 0; j < mInputA.length(); j++) {
@@ -196,7 +196,7 @@ public class ConsumirJson {
                       
                         String auxOptional;
                         //preguntamos si mandatory input es del tipo array. porque se puede dar el caso.
-                        if(entidad.get("OptionalInput").getClass().toString().equalsIgnoreCase("class org.json.JSONArray")){
+                        if(entidad.get("OptionalInput").getClass().toString().equals("class org.json.JSONArray")){
                             JSONArray opInputA =entidad.getJSONArray("OptionalInput"); 
                             for (int j = 0; j < opInputA.length(); j++) {
                                 auxOptional=opInputA.get(j).toString();

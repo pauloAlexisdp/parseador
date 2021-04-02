@@ -23,8 +23,11 @@ public class Role {
     private boolean colabora;
     private boolean noRealizaTarea;
     private int numTareasQueRealiza;
+    private int numTareasQueRealiza2;
     private double distanciaAlPromedio;
+     private double distanciaAlPromedio2;
     private boolean sobreCargado;
+    private boolean sobreCargado2;
     public Role(){
         this.id="";
         this.name="";

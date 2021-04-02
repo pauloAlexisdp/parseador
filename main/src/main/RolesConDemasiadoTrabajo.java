@@ -91,11 +91,13 @@ public class RolesConDemasiadoTrabajo {
                 System.out.println(rol.getName()+" o "+rol.getPresentationName());
             }
         }
-        /**
+        
+        System.out.println("\ndesviacion "+this.desviacionEstandar);
+        System.out.println("promedio "+this.promedioTareasPorRol);    
+        
         for (Role rol : roles) {
             System.out.println(rol.getName()+"--> "+ rol.getNumTareasQueRealiza());
          }
-        System.out.println("desviacion "+this.desviacionEstandar);
-        System.out.println("promedio "+this.promedioTareasPorRol);**/
+
     }
 }

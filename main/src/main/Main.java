@@ -91,6 +91,13 @@ public class Main {
                 Scanner sc = new Scanner (System.in); //Creación de un objeto Scanner
                 op= sc.nextLine();    
                 
+                 if (op.equals("14")) {
+                     ArtefactosMuyRequeridos aux = new ArtefactosMuyRequeridos(consumirArchivo.getTareas(), consumirArchivo.getArtefactos());
+                 }
+                 if (op.equals("13")) {
+                     ArtefactoRelacion aux = new ArtefactoRelacion(consumirArchivo.getTareas(), consumirArchivo.getArtefactos());
+                 }
+                
                 if (op.equals("12")) {
                     RolesConDemasiadoTrabajo aux = new RolesConDemasiadoTrabajo(consumirArchivo.getTareas(), consumirArchivo.getRoles());
                 }

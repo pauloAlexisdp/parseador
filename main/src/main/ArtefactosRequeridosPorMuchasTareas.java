@@ -53,9 +53,9 @@ public class ArtefactosRequeridosPorMuchasTareas {
           
         }
     
-        this.promUsoArtefactos= this.promUsoArtefactos/tareas.size();
+        this.promUsoArtefactos= this.promUsoArtefactos/artefactos.size();
         System.out.println(this.promUsoArtefactos);
-      
+       
        
     }
     
@@ -84,19 +84,19 @@ public class ArtefactosRequeridosPorMuchasTareas {
     
     public void buscarArtefactosMuyRequeridos(){
         for (Artefacto artf : artefactos) {
-            if( artf.getDistanciaConRespectoAlPromedio() > this.desviacionEstandarArtefactosRequeridos){
+            if( artf.getNumVecesRequerido() > this.desviacionEstandarArtefactosRequeridos){
                 artf.setEsMuyRequerido(true);
             }
         }
     }
     
     public void MostrarArtefactosMuyRequeridos(){
-         for (Artefacto artf : artefactos) {
-             if(artf.isEsMuyRequerido() && artf.getNumVecesRequerido()>0){
-                 System.out.println(artf.getName());
-             }
-             //System.out.println(artf.getName()+" "+artf.getNumVecesRequerido());
-         }
+        for (Artefacto artf : artefactos) {
+            if(artf.isEsMuyRequerido() && artf.getNumVecesRequerido()>0){
+                System.out.println(artf.getName()+" "+artf.getNumVecesRequerido());
+            }
+            
+        }
     }
     
 }

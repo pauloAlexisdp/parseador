@@ -27,6 +27,9 @@ public class Artefacto {
     private double numVecesRequerido;
     private double distanciaConRespectoAlPromedio;
     private boolean esMuyRequerido;
+       private double numVecesRequerido2;
+    private double distanciaConRespectoAlPromedio2;
+    private boolean esMuyRequerido2;
     public Artefacto(){
         this.tipo= "";
         this.id="";
@@ -42,6 +45,11 @@ public class Artefacto {
         this.numVecesRequerido=0;
         this.esMuyRequerido=false;
         
+        this.distanciaConRespectoAlPromedio2=0;
+        this.numVecesRequerido2=0;
+        this.esMuyRequerido2=false;
+        
+        
         
     }
     /** 
@@ -56,6 +64,30 @@ public class Artefacto {
                 "\n posee guidance: "+this.isGuidance()+
                 "\n posee sub-artefactos: "+this.subArtefacto);
                 **/
+    }
+
+    public double getNumVecesRequerido2() {
+        return numVecesRequerido2;
+    }
+
+    public void setNumVecesRequerido2(double numVecesRequerido2) {
+        this.numVecesRequerido2 = numVecesRequerido2;
+    }
+
+    public double getDistanciaConRespectoAlPromedio2() {
+        return distanciaConRespectoAlPromedio2;
+    }
+
+    public void setDistanciaConRespectoAlPromedio2(double distanciaConRespectoAlPromedio2) {
+        this.distanciaConRespectoAlPromedio2 = distanciaConRespectoAlPromedio2;
+    }
+
+    public boolean isEsMuyRequerido2() {
+        return esMuyRequerido2;
+    }
+
+    public void setEsMuyRequerido2(boolean esMuyRequerido2) {
+        this.esMuyRequerido2 = esMuyRequerido2;
     }
 
     public boolean isEsMuyRequerido() {
